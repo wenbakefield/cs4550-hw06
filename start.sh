@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export MIX_ENV=prod
-export PORT=4269
+export PORT=4270
 
 CFGD=$(readlink -f ~/.config/bulls)
 

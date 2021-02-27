@@ -1,0 +1,24 @@
+defmodule Bulls.BackupAgent do
+  @moduledoc """
+  Modified from CS 4550 lecture notes
+  Author: Nat Tuck
+  Attribution: https://github.com/NatTuck/scratch-2021-01/blob/master/4550/0219/hangman/lib/hangman/backup_agent.ex
+  """
+  use Agent
+
+  def start_link(_arg) do
+    Agent.start_link(fn -> %{} end, name: __MODULE__)
+  end
+
+  def put(name, val) do
+    Agent.update __MODULE__, fn state ->
+      Map.put(state, name, val)
+    end
+  end
+
+  def get(name) do
+    Agent.get __MODULE__, fn state ->
+      Map.get(state, name)
+    end
+  end
+end

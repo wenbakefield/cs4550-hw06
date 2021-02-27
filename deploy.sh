@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export MIX_ENV=prod
-export PORT=4269
+export PORT=4270
 export SECRET_KEY_BASE=insecure
 
 echo "Building..."
