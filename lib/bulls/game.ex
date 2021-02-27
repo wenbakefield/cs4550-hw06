@@ -30,7 +30,7 @@ defmodule Bulls.Game do
 
   def new(next) do
     %{
-      secret: "1234",
+      secret: random_secret(),
       guesses: Map.new(),
       users: Map.new(),
       winners: [],
